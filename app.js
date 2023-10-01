@@ -1,53 +1,53 @@
-// // Variables 
+// Variables 
 
-// const addTask = document.getElementById('add-task');
-// const taskContainer = document.getElementById('task-container')
-// const inputTask = document.getElementById('input-task')
-
-
-// // Event listener for Add button
+const addTask = document.getElementById('add-task');
+const taskContainer = document.getElementById('task-container')
+const inputTask = document.getElementById('input-task')
 
 
-// addTask.addEventListener('click', function(){
+// Event listener for Add button
 
-//     let task = document.createElement('div');
-//     task.classList.add('task');
 
-//     let li = document.createElement('li');
-//     li.innerText = `${inputTask.value}`;
-//     task.appendChild(li);
+addTask.addEventListener('click', function(){
 
-//     let checkButton = document.createElement('button');
-//     checkButton.innerHTML = '<i class="fa-solid fa-check"></i>';
-//     checkButton.classList.add('checkTask');
-//     task.appendChild(checkButton);
+    let task = document.createElement('div');
+    task.classList.add('task');
 
-//     let deleteButton = document.createElement('button');
-//     deleteButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
-//     deleteButton.classList.add('deleteTask');
-//     task.appendChild(deleteButton);
+    let li = document.createElement('li');
+    li.innerText = `${inputTask.value}`;
+    task.appendChild(li);
 
-//     if(inputTask.value === ""){
-//         alert('Please enter a task');
-//     } else {
-//         taskContainer.appendChild(task);
-//     } 
+    let checkButton = document.createElement('button');
+    checkButton.innerHTML = '<i class="fa-solid fa-check"></i>';
+    checkButton.classList.add('checkTask');
+    task.appendChild(checkButton);
 
-//     inputTask.value = "";
+    let deleteButton = document.createElement('button');
+    deleteButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+    deleteButton.classList.add('deleteTask');
+    task.appendChild(deleteButton);
 
-//     checkButton.addEventListener('click', function(){
-//         checkButton.parentElement.style.textDecoration = "line-through"; 
-//     })
+    if(inputTask.value === ""){
+        alert('Please enter a task');
+    } else {
+        taskContainer.appendChild(task);
+    } 
 
-//     deleteButton.addEventListener('click', function(e){
+    inputTask.value = "";
 
-//         let target = e.target;
+    checkButton.addEventListener('click', function(){
+        checkButton.parentElement.style.textDecoration = "line-through"; 
+    })
 
-//         target.parentElement.parentElement.remove();
+    deleteButton.addEventListener('click', function(e){
 
-//     })
+        let target = e.target;
 
-// })
+        target.parentElement.parentElement.remove();
+
+    })
+
+})
 
 
 
